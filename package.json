@@ -20,6 +20,8 @@
     "@angular/router": "^17.3.0",
     "@aws-amplify/ui-angular": "^5.0.16",
     "aws-amplify": "^6.2.0",
+    "core-js": "^3.37.1",
+    "glob": "^9.3.5",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
