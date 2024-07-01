@@ -9,6 +9,7 @@ frontend:
   phases:
     preBuild:
       commands:
+        - nvm install 20.11.1
         - npm install -g npm@latest
         - npm install -g @angular/cli
     build:
