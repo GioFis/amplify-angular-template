@@ -15,7 +15,7 @@ frontend:
     build:
       commands:
         - npm ci
-        - ng build --prod
+        - ng build
   artifacts:
     baseDirectory: dist
     files:
