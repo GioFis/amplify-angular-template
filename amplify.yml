@@ -7,16 +7,19 @@ backend:
         - npx ampx pipeline-deploy --branch $AWS_BRANCH --app-id $AWS_APP_ID
 frontend:
   phases:
+    preBuild:
+      commands:
+        - nvm install 20.11.1
+        - npm install -g npm@latest
+        - npm install -g @angular/cli
     build:
       commands:
-        - npm install -g @angular/cli
-        - ng version
-        - ng build --configuration=production
+        - npm ci
+        - ng build --prod
   artifacts:
-    baseDirectory: dist/amplify-angular-template/browser
+    baseDirectory: dist
     files:
       - '**/*'
   cache:
     paths:
-      - .npm/**/*
       - node_modules/**/*
