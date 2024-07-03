@@ -1,0 +1,123 @@
+# this is an auto generated file. This will be overwritten
+
+query GetCustomerDevice($DeviceId: String, $LicenseId: String) {
+  getCustomerDevice(DeviceId: $DeviceId, LicenseId: $LicenseId) {
+    DeviceId
+    LicenseId
+    UUID
+    active
+    createdAt
+    location {
+      latitude
+      longitude
+      __typename
+    }
+    roleType
+    sensor {
+      Humidity
+      Temperature
+      acValue
+      dcValue
+      lightValue
+      sensorId
+      sensorType
+      __typename
+    }
+    __typename
+  }
+}
+
+query GetCustomerDeviceAndTimeseriesData(
+  $DeviceId: String
+  $LicenseId: String
+) {
+  getCustomerDeviceAndTimeseriesData(
+    DeviceId: $DeviceId
+    LicenseId: $LicenseId
+  ) {
+    customerDevice {
+      DeviceId
+      LicenseId
+      UUID
+      active
+      createdAt
+      roleType
+      __typename
+    }
+    timeseriesData {
+      Humidity
+      SCUStatusActive
+      SensorId
+      Temperature
+      UUID
+      currentAc
+      currentDc
+      measure_name
+      time
+      __typename
+    }
+    __typename
+  }
+}
+
+query GetCustomerDevicesByLicense($LicenseId: String!) {
+  getCustomerDevicesByLicense(LicenseId: $LicenseId) {
+    DeviceId
+    LicenseId
+    UUID
+    active
+    createdAt
+    location {
+      latitude
+      longitude
+      __typename
+    }
+    roleType
+    sensor {
+      Humidity
+      Temperature
+      acValue
+      dcValue
+      lightValue
+      sensorId
+      sensorType
+      __typename
+    }
+    __typename
+  }
+}
+
+query GetTimeseriesData($DeviceId: String, $LicenseId: String) {
+  getTimeseriesData(DeviceId: $DeviceId, LicenseId: $LicenseId) {
+    Humidity
+    SCUStatusActive
+    SensorId
+    Temperature
+    UUID
+    currentAc
+    currentDc
+    measure_name
+    time
+    __typename
+  }
+}
+
+query ListCustomerDevices(
+  $filter: TableCustomerDeviceFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listCustomerDevices(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      DeviceId
+      LicenseId
+      UUID
+      active
+      createdAt
+      roleType
+      __typename
+    }
+    nextToken
+    __typename
+  }
+}

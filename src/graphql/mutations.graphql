@@ -1,0 +1,82 @@
+# this is an auto generated file. This will be overwritten
+
+mutation CreateCustomerDevice($input: CreateCustomerDeviceInput!) {
+  createCustomerDevice(input: $input) {
+    DeviceId
+    LicenseId
+    UUID
+    active
+    createdAt
+    location {
+      latitude
+      longitude
+      __typename
+    }
+    roleType
+    sensor {
+      Humidity
+      Temperature
+      acValue
+      dcValue
+      lightValue
+      sensorId
+      sensorType
+      __typename
+    }
+    __typename
+  }
+}
+
+mutation DeleteCustomerDevice($input: DeleteCustomerDeviceInput!) {
+  deleteCustomerDevice(input: $input) {
+    DeviceId
+    LicenseId
+    UUID
+    active
+    createdAt
+    location {
+      latitude
+      longitude
+      __typename
+    }
+    roleType
+    sensor {
+      Humidity
+      Temperature
+      acValue
+      dcValue
+      lightValue
+      sensorId
+      sensorType
+      __typename
+    }
+    __typename
+  }
+}
+
+mutation UpdateCustomerDevice($input: UpdateCustomerDeviceInput!) {
+  updateCustomerDevice(input: $input) {
+    DeviceId
+    LicenseId
+    UUID
+    active
+    createdAt
+    location {
+      latitude
+      longitude
+      __typename
+    }
+    roleType
+    sensor {
+      Humidity
+      Temperature
+      acValue
+      dcValue
+      lightValue
+      sensorId
+      sensorType
+      __typename
+    }
+    __typename
+  }
+}

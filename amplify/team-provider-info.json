@@ -10,6 +10,14 @@
       "StackName": "amplify-amplyang-dev-5cc85",
       "StackId": "arn:aws:cloudformation:us-east-1:590183809434:stack/amplify-amplyang-dev-5cc85/edf69510-3928-11ef-86ce-0e5c3c8a7707",
       "AmplifyAppId": "d1x6soxyla8wlf"
+    },
+    "categories": {
+      "auth": {
+        "amplyangeb971d68": {}
+      },
+      "api": {
+        "TestApi": {}
+      }
     }
   }
 }
