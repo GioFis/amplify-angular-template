@@ -9,7 +9,11 @@
       "apiKeyExpirationDate": "2025-07-04T10:27:33.177Z",
       "keyDescription": "use api key"
     },
-    "conflictResolution": {},
+    "conflictResolution": {
+      "defaultResolutionStrategy": {
+        "type": "OPTIMISTIC_CONCURRENCY"
+      }
+    },
     "additionalAuthTypes": []
   }
 }
