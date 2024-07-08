@@ -15,8 +15,16 @@
       "auth": {
         "amplyangeb971d68": {}
       },
+<<<<<<< HEAD
       "api": {
         "TestApi": {}
+=======
+      "function": {
+        "syncConflictHandler590075e5": {
+          "deploymentBucketName": "amplify-amplyang-dev-5cc85-deployment",
+          "s3Key": "amplify-builds/syncConflictHandler590075e5-6734665675576e68694c-build.zip"
+        }
+>>>>>>> 59a5ff1 (Gen2 from Gen1)
       }
     }
   }

@@ -1,5 +1,12 @@
 {
+<<<<<<< HEAD
   "projectName": "AmplyAng",
+=======
+  "providers": [
+    "awscloudformation"
+  ],
+  "projectName": "amplifyangulartempla",
+>>>>>>> 59a5ff1 (Gen2 from Gen1)
   "version": "3.1",
   "frontend": "javascript",
   "javascript": {
@@ -10,8 +17,12 @@
       "BuildCommand": "ng build",
       "StartCommand": "ng serve"
     }
+<<<<<<< HEAD
   },
   "providers": [
     "awscloudformation"
   ]
+=======
+  }
+>>>>>>> 59a5ff1 (Gen2 from Gen1)
 }

@@ -1,17 +1,36 @@
 {
   "api": {
     "TestApi": {
+<<<<<<< HEAD
       "dependsOn": [],
+=======
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "amplyangeb971d68"
+        }
+      ],
+>>>>>>> 59a5ff1 (Gen2 from Gen1)
       "output": {
         "authConfig": {
           "additionalAuthenticationProviders": [],
           "defaultAuthentication": {
+<<<<<<< HEAD
             "apiKeyConfig": {
               "apiKeyExpirationDate": "2025-07-04T10:27:33.177Z",
               "apiKeyExpirationDays": 365,
               "description": "use api key"
             },
             "authenticationType": "API_KEY"
+=======
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authamplyangeb971d68"
+            }
+>>>>>>> 59a5ff1 (Gen2 from Gen1)
           }
         }
       },
@@ -46,5 +65,38 @@
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
     }
+<<<<<<< HEAD
+=======
+  },
+  "function": {
+    "GetCustomerDevice": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "syncConflictHandler590075e5": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_syncConflictHandler590075e5_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "syncConflictHandler590075e5"
+        }
+      ]
+    },
+    "AMPLIFY_function_syncConflictHandler590075e5_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "syncConflictHandler590075e5"
+        }
+      ]
+    }
+>>>>>>> 59a5ff1 (Gen2 from Gen1)
   }
 }

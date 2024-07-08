@@ -9,11 +9,19 @@ schema {
 }
 
 type CustomerDevice {
+<<<<<<< HEAD
   DeviceId: String
   LicenseId: String
   UUID: String
   active: Boolean
   createdAt: String
+=======
+  DeviceId: String!
+  LicenseId: String!
+  UUID: String
+  active: Boolean
+  createdAt: AWSDateTime
+>>>>>>> 59a5ff1 (Gen2 from Gen1)
   location: Location
   roleType: String
   sensor: Sensor
@@ -30,8 +38,13 @@ type CustomerDeviceConnection {
 }
 
 type Location {
+<<<<<<< HEAD
   latitude: String
   longitude: String
+=======
+  latitude: Float
+  longitude: Float
+>>>>>>> 59a5ff1 (Gen2 from Gen1)
 }
 
 type Mutation {
@@ -41,7 +54,11 @@ type Mutation {
 }
 
 type Query {
+<<<<<<< HEAD
   getCustomerDevice(DeviceId: String, LicenseId: String): CustomerDevice
+=======
+  getCustomerDevice(LicenseId: String!,DeviceId: String!): CustomerDevice @function(name: "getCustomerDevice")
+>>>>>>> 59a5ff1 (Gen2 from Gen1)
   getCustomerDeviceAndTimeseriesData(DeviceId: String, LicenseId: String): CustomerDeviceAndTimeseriesData
   getCustomerDevicesByLicense(LicenseId: String!): [CustomerDevice]
   getTimeseriesData(DeviceId: String, LicenseId: String): [TimeseriesData]

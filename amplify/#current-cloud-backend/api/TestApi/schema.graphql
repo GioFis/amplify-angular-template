@@ -1,0 +1,165 @@
+# This "input" configures a global authorization rule to enable public access to
+# all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
+input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
+
+schema {
+  query: Query
+  mutation: Mutation
+  subscription: Subscription
+}
+
+type CustomerDevice {
+  DeviceId: String
+  LicenseId: String
+  UUID: String
+  active: Boolean
+  createdAt: String
+  location: Location
+  roleType: String
+  sensor: Sensor
+}
+
+type CustomerDeviceAndTimeseriesData {
+  customerDevice: CustomerDevice
+  timeseriesData: [TimeseriesData]
+}
+
+type CustomerDeviceConnection {
+  items: [CustomerDevice]
+  nextToken: String
+}
+
+type Location {
+  latitude: String
+  longitude: String
+}
+
+type Mutation {
+  createCustomerDevice(input: CreateCustomerDeviceInput!): CustomerDevice
+  deleteCustomerDevice(input: DeleteCustomerDeviceInput!): CustomerDevice
+  updateCustomerDevice(input: UpdateCustomerDeviceInput!): CustomerDevice
+}
+
+type Query {
+  getCustomerDevice(DeviceId: String, LicenseId: String): CustomerDevice
+  getCustomerDeviceAndTimeseriesData(DeviceId: String, LicenseId: String): CustomerDeviceAndTimeseriesData
+  getCustomerDevicesByLicense(LicenseId: String!): [CustomerDevice]
+  getTimeseriesData(DeviceId: String, LicenseId: String): [TimeseriesData]
+  listCustomerDevices(filter: TableCustomerDeviceFilterInput, limit: Int, nextToken: String): CustomerDeviceConnection
+}
+
+type Sensor {
+  Humidity: Float
+  Temperature: Float
+  acValue: Float
+  dcValue: Float
+  lightValue: Boolean
+  sensorId: Int
+  sensorType: String
+}
+
+type Subscription {
+  onCreateCustomerDevice(DeviceId: String, LicenseId: String): CustomerDevice @aws_subscribe(mutations : ["createCustomerDevice"])
+  onDeleteCustomerDevice(DeviceId: String, LicenseId: String): CustomerDevice @aws_subscribe(mutations : ["deleteCustomerDevice"])
+  onUpdateCustomerDevice(DeviceId: String, LicenseId: String): CustomerDevice @aws_subscribe(mutations : ["updateCustomerDevice"])
+}
+
+type TimeseriesData {
+  Humidity: Float
+  SCUStatusActive: Boolean
+  SensorId: String
+  Temperature: Float
+  UUID: String
+  currentAc: Float
+  currentDc: Float
+  measure_name: String
+  time: String
+}
+
+input CreateCustomerDeviceInput {
+  DeviceId: String!
+  LicenseId: String!
+}
+
+input DeleteCustomerDeviceInput {
+  DeviceId: String!
+  LicenseId: String!
+}
+
+input ModelSizeInput {
+  between: [Int]
+  eq: Int
+  ge: Int
+  gt: Int
+  le: Int
+  lt: Int
+  ne: Int
+}
+
+input TableBooleanFilterInput {
+  attributeExists: Boolean
+  eq: Boolean
+  ne: Boolean
+}
+
+input TableCustomerDeviceFilterInput {
+  DeviceId: TableStringFilterInput
+  LicenseId: TableStringFilterInput
+}
+
+input TableFloatFilterInput {
+  attributeExists: Boolean
+  between: [Float]
+  eq: Float
+  ge: Float
+  gt: Float
+  le: Float
+  lt: Float
+  ne: Float
+}
+
+input TableIDFilterInput {
+  attributeExists: Boolean
+  beginsWith: ID
+  between: [ID]
+  contains: ID
+  eq: ID
+  ge: ID
+  gt: ID
+  le: ID
+  lt: ID
+  ne: ID
+  notContains: ID
+  size: ModelSizeInput
+}
+
+input TableIntFilterInput {
+  attributeExists: Boolean
+  between: [Int]
+  eq: Int
+  ge: Int
+  gt: Int
+  le: Int
+  lt: Int
+  ne: Int
+}
+
+input TableStringFilterInput {
+  attributeExists: Boolean
+  beginsWith: String
+  between: [String]
+  contains: String
+  eq: String
+  ge: String
+  gt: String
+  le: String
+  lt: String
+  ne: String
+  notContains: String
+  size: ModelSizeInput
+}
+
+input UpdateCustomerDeviceInput {
+  DeviceId: String!
+  LicenseId: String!
+}

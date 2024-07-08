@@ -4,6 +4,7 @@
     "apiName": "TestApi",
     "serviceName": "AppSync",
     "defaultAuthType": {
+<<<<<<< HEAD
       "mode": "API_KEY",
       "expirationTime": 365,
       "apiKeyExpirationDate": "2025-07-04T10:27:33.177Z",
@@ -12,6 +13,18 @@
     "conflictResolution": {
       "defaultResolutionStrategy": {
         "type": "OPTIMISTIC_CONCURRENCY"
+=======
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authamplyangeb971d68"
+    },
+    "conflictResolution": {
+      "defaultResolutionStrategy": {
+        "type": "LAMBDA",
+        "resolver": {
+          "type": "EXISTING",
+          "name": "syncConflictHandler590075e5-${env}"
+        }
+>>>>>>> 59a5ff1 (Gen2 from Gen1)
       }
     },
     "additionalAuthTypes": []

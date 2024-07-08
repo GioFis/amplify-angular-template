@@ -1,5 +1,16 @@
 {
   "AppSyncApiName": "TestApi",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
+<<<<<<< HEAD
   "DynamoDBEnableServerSideEncryption": false
+=======
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authamplyangeb971d68",
+      "Outputs.UserPoolId"
+    ]
+  },
+  "AuthModeLastUpdated": "2024-07-07T12:48:38.006Z"
+>>>>>>> 59a5ff1 (Gen2 from Gen1)
 }
