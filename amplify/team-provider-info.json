@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplyang-dev-5cc85-authRole",
+      "UnauthRoleArn": "arn:aws:iam::590183809434:role/amplify-amplyang-dev-5cc85-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::590183809434:role/amplify-amplyang-dev-5cc85-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-amplyang-dev-5cc85-deployment",
+      "UnauthRoleName": "amplify-amplyang-dev-5cc85-unauthRole",
+      "StackName": "amplify-amplyang-dev-5cc85",
+      "StackId": "arn:aws:cloudformation:us-east-1:590183809434:stack/amplify-amplyang-dev-5cc85/edf69510-3928-11ef-86ce-0e5c3c8a7707",
+      "AmplifyAppId": "d1x6soxyla8wlf"
+    },
+    "categories": {
+      "auth": {
+        "amplyangeb971d68": {}
+      },
+      "function": {
+        "syncConflictHandler590075e5": {
+          "deploymentBucketName": "amplify-amplyang-dev-5cc85-deployment",
+          "s3Key": "amplify-builds/syncConflictHandler590075e5-6734665675576e68694c-build.zip"
+        }
+      }
+    }
+  }
+}

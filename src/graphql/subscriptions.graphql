@@ -1,0 +1,82 @@
+# this is an auto generated file. This will be overwritten
+
+subscription OnCreateCustomerDevice($DeviceId: String, $LicenseId: String) {
+  onCreateCustomerDevice(DeviceId: $DeviceId, LicenseId: $LicenseId) {
+    DeviceId
+    LicenseId
+    UUID
+    active
+    createdAt
+    location {
+      latitude
+      longitude
+      __typename
+    }
+    roleType
+    sensor {
+      Humidity
+      Temperature
+      acValue
+      dcValue
+      lightValue
+      sensorId
+      sensorType
+      __typename
+    }
+    __typename
+  }
+}
+
+subscription OnDeleteCustomerDevice($DeviceId: String, $LicenseId: String) {
+  onDeleteCustomerDevice(DeviceId: $DeviceId, LicenseId: $LicenseId) {
+    DeviceId
+    LicenseId
+    UUID
+    active
+    createdAt
+    location {
+      latitude
+      longitude
+      __typename
+    }
+    roleType
+    sensor {
+      Humidity
+      Temperature
+      acValue
+      dcValue
+      lightValue
+      sensorId
+      sensorType
+      __typename
+    }
+    __typename
+  }
+}
+
+subscription OnUpdateCustomerDevice($DeviceId: String, $LicenseId: String) {
+  onUpdateCustomerDevice(DeviceId: $DeviceId, LicenseId: $LicenseId) {
+    DeviceId
+    LicenseId
+    UUID
+    active
+    createdAt
+    location {
+      latitude
+      longitude
+      __typename
+    }
+    roleType
+    sensor {
+      Humidity
+      Temperature
+      acValue
+      dcValue
+      lightValue
+      sensorId
+      sensorType
+      __typename
+    }
+    __typename
+  }
+}
