@@ -9,8 +9,6 @@ frontend:
   phases:
     preBuild:
       commands:
-        - pip3 install awscli --upgrade --user
-        - aws codeartifact login --tool npm --repository repository_name --domain domain_name --domain-owner domain_owner_id
         - npm ci
         - nvm install 20.11.1
         - npm install -g npm@latest
