@@ -5,6 +5,8 @@ backend:
       commands:
         - nvm install 20.11.1
         - npm install -g npm@latest
+        - pip3 install awscli --upgrade --user
+        - aws codeartifact login --tool npm --repository repository_name --domain domain_name --domain-owner domain_owner_id
     build:
       commands:
         - npm ci --cache .npm --prefer-offline
@@ -16,6 +18,8 @@ frontend:
         - nvm install 20.11.1
         - npm install -g npm@latest
         - npm install -g @angular/cli
+        - pip3 install awscli --upgrade --user
+        - aws codeartifact login --tool npm --repository repository_name --domain domain_name --domain-owner domain_owner_id
     build:
       commands:
         - ng version
