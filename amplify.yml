@@ -7,7 +7,6 @@ backend:
         - nvm use 20.11.1
         - npm install -g npm@latest
         - pip3 install --user awscli
-        - export PATH=$PATH:$HOME/.local/bin
     build:
       commands:
         - npm ci --cache .npm --prefer-offline
